@@ -1,1 +1,1 @@
-alert('Olá mundo em JavaScript na Alura');
+document.querySelector('.tecla_pom')
