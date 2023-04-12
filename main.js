@@ -1,0 +1,1 @@
+alert('Olá mundo em JavaScript na Alura');
