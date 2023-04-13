@@ -14,8 +14,11 @@ const listaDeSons = document.querySelectorAll(".som")
 // Referência variável no JavaScrip ->> Uma variável que receberá um valor novo. São declaradas com LET
 let contador = 0;
 
-while(contador < 9){
-    listaDeTeclas[0].onclick = tocaSom;
+while(contador < listaDeTeclas.length){
+    /**Criando função anônima para receber a função tocaSom. Função anômima ->> function() */
+    listaDeTeclas[contador].onclick = function(){
+        tocaSom('#som_tecla_pom')
+    };
     contador = contador + 1;
     console.log(contador)
 }
