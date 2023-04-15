@@ -3,11 +3,13 @@ document.querySelector('.tecla_pom')
 
 function tocaSom(seletorAudio){
     const elemento = document.querySelector(seletorAudio)
-
-    if (elemento === null){
-        alert('Elemento não encontrado')
+    if (elemento != null && elemento.localName === 'audio'){
+        //localName informa qual propriedade, onde o elemento guarda a informação do nome.
+            elemento.play() 
+        }
+    else{
+        console.log('Elemento não encontrado ou seletor inválido')
     }
-    
 }
 
 /*Referências ->> devem ser criadas com base no valor que elas vão receber e vão guardar. São declaradas com CONST*/
