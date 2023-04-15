@@ -1,8 +1,13 @@
 /* Exemplo 1*/
 document.querySelector('.tecla_pom')
 
-function tocaSom(idElementoAudio){
-    document.querySelector(idElementoAudio).play()
+function tocaSom(seletorAudio){
+    const elemento = document.querySelector(seletorAudio)
+
+    if (elemento === null){
+        alert('Elemento não encontrado')
+    }
+    
 }
 
 /*Referências ->> devem ser criadas com base no valor que elas vão receber e vão guardar. São declaradas com CONST*/
@@ -31,11 +36,13 @@ for(let contador = 0; contador < listaDeTeclas.length; contador++){
     }
     //contador = contador + 1;
     // ONKEYDOWN ->> evento de teclado, quando a tecla estiver abaixada.
+    // ONKEYUP ->> evento de teclado, quando a tecla estiver levantada
     tecla.onkeydown = function(){
         // .ADD vai adicionar uma classe a lista de classes do elemento.
         tecla.classList.add('ativa');
     }
     tecla.onkeyup = function(){
+        //.REMOVE vai remover uma classe da lista de classes do elemento.
         tecla.classList.remove('ativa');
     }
 }
