@@ -16,7 +16,7 @@ let contador = 0;
 
 while(contador < listaDeTeclas.length){
 
-    
+
     const tecla = listaDeTeclas[contador];
 
     // A classList retorna uma lista mostrando o id e a classe ,
@@ -25,6 +25,7 @@ while(contador < listaDeTeclas.length){
     console.log(instrumento)
     
     /*Template string ->> `${variável/constante/referencias/contas/...}`*/
+    /* No caso, ele concatena uma string com o referencial INSTRUMENTO para formar a string com o id do audio que será tocado. */
     const idAudio = `#som_${instrumento}`;
     
     console.log(idAudio)
