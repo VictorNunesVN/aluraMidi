@@ -12,9 +12,9 @@ const listaDeTeclas = document.querySelectorAll(".tecla")
 const listaDeSons = document.querySelectorAll(".som")
 
 // Referência variável no JavaScrip ->> Uma variável que receberá um valor novo. São declaradas com LET
-let contador = 0;
+//let contador = 0;
 
-while(contador < listaDeTeclas.length){
+for(let contador = 0; contador = listaDeTeclas.length; contador++){
 
 
     const tecla = listaDeTeclas[contador];
@@ -36,6 +36,7 @@ while(contador < listaDeTeclas.length){
         //aqui a função tocaSom pega o id de cada audio pra tocar o som específico.
         tocaSom(idAudio)
     };
-    contador = contador + 1;
+
+    //contador = contador + 1;
     console.log(contador)
 }
