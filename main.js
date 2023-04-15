@@ -15,9 +15,25 @@ const listaDeSons = document.querySelectorAll(".som")
 let contador = 0;
 
 while(contador < listaDeTeclas.length){
+
+    
+    const tecla = listaDeTeclas[contador];
+
+    // A classList retorna uma lista mostrando o id e a classe ,
+    // no caso ele mostra o id que está na posição 1 da lista.
+    const instrumento = tecla.classList[1];
+    console.log(instrumento)
+    
+    /*Template string ->> `${variável/constante/referencias/contas/...}`*/
+    const idAudio = `#som_${instrumento}`;
+    
+    console.log(idAudio)
+    
+
     /**Criando função anônima para receber a função tocaSom. Função anômima ->> function() */
-    listaDeTeclas[contador].onclick = function(){
-        tocaSom('#som_tecla_pom')
+    tecla.onclick = function(){
+        //aqui a função tocaSom pega o id de cada audio pra tocar o som específico.
+        tocaSom(idAudio)
     };
     contador = contador + 1;
     console.log(contador)
