@@ -39,9 +39,15 @@ for(let contador = 0; contador < listaDeTeclas.length; contador++){
     //contador = contador + 1;
     // ONKEYDOWN ->> evento de teclado, quando a tecla estiver abaixada.
     // ONKEYUP ->> evento de teclado, quando a tecla estiver levantada
-    tecla.onkeydown = function(){
+    tecla.onkeydown = function(evento){
+        if(evento.code === 'Space'){
+        console.log(evento.code === 'Space')
         // .ADD vai adicionar uma classe a lista de classes do elemento.
         tecla.classList.add('ativa');
+        }
+        if (evento.code === 'Enter'){
+            tecla.classList.add('ativa');
+        }
     }
     tecla.onkeyup = function(){
         //.REMOVE vai remover uma classe da lista de classes do elemento.
